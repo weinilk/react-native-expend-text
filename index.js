@@ -106,7 +106,7 @@ class Expendext extends Component {
             ) : null;
             return (
                 <View>
-                    {isShowExpand?<View style={{height:1,flex:1,backgroundColor:'rgb(229,229,229)',marginVertical:10}}/>:null}
+                    {isShowExpand?<View style={{height:1,backgroundColor:'rgb(229,229,229)',marginVertical:10}}/>:null}
                     <View style={[{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}]}>
                         {this.haseDetail?<TouchableOpacity onPress={this._toDetail.bind(this)} activeOpacity={1} style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
                             <Text style={[styles.expandText,expandTextStyle,{backgroundColor:'white'}]}>查看详情</Text>
