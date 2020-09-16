@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {View, Image, StyleSheet, Text,TouchableOpacity} from 'react-native';
-export var ExpandType = {
+var ExpandType = {
     //展开按钮在文字末尾
     tailType : 0,
     //展开按钮在文字下方
@@ -110,12 +110,12 @@ class Expendext extends Component {
                     <View style={[{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}]}>
                         {this.haseDetail?<TouchableOpacity onPress={this._toDetail.bind(this)} activeOpacity={1} style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
                             <Text style={[styles.expandText,expandTextStyle,{backgroundColor:'white'}]}>查看详情</Text>
-                            <Image style={{width:9,height:15,marginLeft:7}} source = {require('../Image/xiangqing.png')}/>
+                            <Image style={{width:9,height:15,marginLeft:7}} source = {require('./Image/xiangqing.png')}/>
                         </TouchableOpacity>:<View/>}
                         {this.state.showExpandText?<TouchableOpacity onPress={this._onPressExpand.bind(this)} activeOpacity={1} style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
                             {expandText}
                             <Image style={{width:15,height:9,marginLeft:7,transform: this.state.expanded?[{rotate:'180deg'}]:[{rotateX:'0deg'}]}}
-                            source = {require('../Image/text_zhankai.png')}/>
+                            source = {require('./Image/text_zhankai.png')}/>
                         </TouchableOpacity>:<View/>}
                     </View>
                 </View>
@@ -134,4 +134,7 @@ const styles = StyleSheet.create({
 
 });
 
-export default Expendext;
+export {
+    Expendext,
+    ExpandType
+};
